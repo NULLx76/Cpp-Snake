@@ -1,6 +1,7 @@
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
+#include <time.h> // To make spawn value more random
 using namespace std;
 bool gameOver;
 const int width = 20;
@@ -134,6 +135,7 @@ void Logic()
 
     if (x == fruitX && y == fruitY)
     {
+        srand(time(0)); // Random seed value for rand based on time
         score += 10;
         fruitX = rand() % width;
         fruitY = rand() % height;
