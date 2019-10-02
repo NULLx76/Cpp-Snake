@@ -24,6 +24,8 @@ void Setup()
 void Draw()
 {
     system("cls"); //system("clear");
+    cout << endl;
+    cout << " ";
     for (int i = 0; i < width+2; i++)
         cout << "#";
     cout << endl;
@@ -33,7 +35,7 @@ void Draw()
         for (int j = 0; j < width; j++)
         {
             if (j == 0)
-                cout << "#";
+                cout << " #";
             if (i == y && j == x)
                 cout << "O";
             else if (i == fruitY && j == fruitX)
@@ -59,10 +61,11 @@ void Draw()
         cout << endl;
     }
 
+    cout << " ";
     for (int i = 0; i < width+2; i++)
         cout << "#";
     cout << endl;
-    cout << "Score:" << score << endl;
+    cout << " Score:" << score << endl;
 }
 void Input()
 {
@@ -143,6 +146,7 @@ void Logic()
 }
 int main()
 {
+    system("MODE con cols=24 lines=25");
     Setup();
     while (!gameOver)
     {
