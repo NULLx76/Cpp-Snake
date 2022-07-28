@@ -146,6 +146,10 @@ void Logic()
 }
 int main()
 {
+    //Will make cout much faster
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(NULL);
+    
     system("MODE con cols=24 lines=25");
     Setup();
     while (!gameOver)
