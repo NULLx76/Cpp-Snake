@@ -102,12 +102,8 @@ void Logic()
     tailY[0] = y;
     for (int i = 1; i < nTail; i++)
     {
-        prev2X = tailX[i];
-        prev2Y = tailY[i];
-        tailX[i] = prevX;
-        tailY[i] = prevY;
-        prevX = prev2X;
-        prevY = prev2Y;
+        swap(tailX[i-1],tailX[i]);
+        swap(tailY[i-1],tailY[i]);
     }
     switch (dir)
     {
